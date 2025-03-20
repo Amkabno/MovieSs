@@ -1,4 +1,6 @@
 import React from "react";
+import { ChevronDown } from "lucide-react";
+
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -11,11 +13,11 @@ import {
 export const Genre = () => {
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger className=" h-[30px] border-[2px] px-[15px] py-[5px] border-r-8 justify-center items-center">
-        Genre
+      <DropdownMenuTrigger className=" h-object-fit border-[1.5px] rounded-[6px] px-[16px] py-[8px] border-r-8  items-center flex w-object-fit gap-[8px] font-[500] text-[14px] ">
+        <ChevronDown className="stroke-[1.2px] " /> Genre
       </DropdownMenuTrigger>
       <DropdownMenuContent>
-        <DropdownMenuLabel className="text-[24px] font-[600]">
+        <DropdownMenuLabel className="size-[30px] font-[600] ">
           Genres
         </DropdownMenuLabel>
         <p className="text-[16px] font-[400] ml-[10px] mb-[15px] ">
