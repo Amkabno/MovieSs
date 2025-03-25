@@ -1,9 +1,11 @@
-import { Genre } from "@/components/Genre";
+import { GenreDropdown } from "@/components/GenreDropdown";
 import { Film } from "lucide-react";
 import { SearchIn } from "@/components/SearchIn";
 import { DarkMod } from "@/components/DarkMod";
 import { Slide } from "@/components/Slide";
 import { Upcoming } from "@/components/Upcoming";
+import { Popular } from "@/components/Popular";
+import { Footer } from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -16,7 +18,7 @@ export default function Home() {
           </p>
         </span>
         <span className="flex items-center gap-[12px]">
-          <Genre />
+          <GenreDropdown />
           <SearchIn />
         </span>
         <span className="flex items-center">
@@ -26,8 +28,10 @@ export default function Home() {
       <div className="flex pt-[80px] w-full">
         <Slide />
       </div>
-      <div>
+      <div className="flex flex-col gap-[52px]">
         <Upcoming />
+        <Popular />
+        <Footer />
       </div>
     </div>
   );

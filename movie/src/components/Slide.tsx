@@ -20,25 +20,26 @@ export const Slide = () => {
             alt="Slide 1"
           />
 
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-5">
+          <div className="absolute  inset-0  flex flex-col justify-end left-40 bottom-45">
             <p className="text-white text-[14px]">Now Playing:</p>
-            <p className="text-white text-[20px] font-bold">Wicked</p>
+            <p className="text-white text-[36px] font-[700]">Wicked</p>
             <div className="flex items-center gap-1">
               <Star
                 className="stroke-[1px] text-[#fde047] fill-[#fde047]"
                 size={16}
               />
               <p className="text-white text-[14px]">8.5/10</p>
-              <p className="text-white w-[302px]">
-                Elphaba, a misunderstood young woman because of her green skin,
-                and Glinda, a popular girl, become friends at Shiz University in
-                the Land of Oz. After an encounter with the Wonderful Wizard of
-                Oz, their friendship reaches a crossroads.
-              </p>
-              <button className="flex justify-center items-center h-[40px] w-object-fit rounded-[6px] bg-white px-[16px] gap-[8px]">
-                <Play className="stroke-[1.4px] size-[18px]" /> Watch Trailer
-              </button>
             </div>
+
+            <p className="text-white w-[302px] text-[13px] py-[16px]">
+              Elphaba, a misunderstood young woman because of her green skin,
+              and Glinda, a popular girl, become friends at Shiz University in
+              the Land of Oz. After an encounter with the Wonderful Wizard of
+              Oz, their friendship reaches a crossroads.
+            </p>
+            <button className="flex justify-center items-center h-[40px] w-[145px] rounded-[6px] bg-white  gap-[8px]">
+              <Play className="stroke-[1.4px] size-[18px] " /> Watch Trailer
+            </button>
           </div>
         </CarouselItem>
 
