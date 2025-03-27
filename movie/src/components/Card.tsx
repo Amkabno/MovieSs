@@ -15,12 +15,15 @@ export const Card: React.FC<CardProps> = ({ rate, title, src }) => {
         alt={title}
       />
       <div className="p-3">
-        <div className="flex items-center gap-1">
+        <div className="flex items-center gap-1 ">
           <Star
             className="stroke-[1px] text-[#fde047] fill-[#fde047]"
             size={16}
           />
-          <p>{rate}/10</p>
+          <div className="flex items-center">
+            <p className="text-[14px] font-[500]">{rate}</p>
+            <p className="text-[12px] font-[400] text-[#71717A] ">/10</p>
+          </div>
         </div>
         <p className="text-[18px] font-[400]">{title}</p>
       </div>

@@ -28,7 +28,10 @@ export const Slide = () => {
                 className="stroke-[1px] text-[#fde047] fill-[#fde047]"
                 size={16}
               />
-              <p className="text-white text-[14px]">8.5/10</p>
+              <div className="flex items-center">
+                <p className="text-white text-[18px] font-[600]">7.5</p>
+                <p className="text-[#cbcbcb] text-[16px] font-[400]">/10</p>
+              </div>
             </div>
 
             <p className="text-white w-[302px] text-[13px] py-[16px]">
@@ -45,16 +48,64 @@ export const Slide = () => {
 
         <CarouselItem className="min-w-full flex-shrink-0 relative">
           <img
-            className="w-full h-auto min-h-[300px] sm:min-h-[200px] object-cover"
+            src="https://movies.universalpictures.com/media/02-wiy-dm-mobile-banner-1080x745-f-kr-f01-032425-67e1fcf8b43db-1.jpg "
+            className="w-full h-[764px] min-h-[300px] sm:min-h-[200px] object-cover"
             alt="Slide 2"
-          />
+          ></img>
+          <div className="absolute  inset-0  flex flex-col justify-end left-40 bottom-45">
+            <p className="text-white text-[14px]">Now Playing:</p>
+            <p className="text-white text-[36px] font-[700]">
+              The Woman In The Yard
+            </p>
+            <div className="flex items-center gap-1">
+              <Star
+                className="stroke-[1px] text-[#fde047] fill-[#fde047]"
+                size={16}
+              />
+              <div className="flex items-center">
+                <p className="text-white text-[18px] font-[600]">8.0</p>
+                <p className="text-[#cbcbcb] text-[16px] font-[400]">/10</p>
+              </div>
+            </div>
+
+            <p className="text-white w-[302px] text-[13px] py-[16px]">
+              A mysterious woman repeatedly appears in a family's front yard,
+              often delivering chilling warnings and unsettling messages,
+              leaving them to question her identity, motives and the potential
+              danger she might pose.
+            </p>
+            <button className="flex justify-center items-center h-[40px] w-[145px] rounded-[6px] bg-white  gap-[8px]">
+              <Play className="stroke-[1.4px] size-[18px] " /> Watch Trailer
+            </button>
+          </div>
         </CarouselItem>
 
         <CarouselItem className="min-w-full flex-shrink-0 relative">
           <img
-            className="w-full h-auto min-h-[300px] sm:min-h-[200px] object-cover"
+            src="https://images.squarespace-cdn.com/content/67b220b41b69c13c06704823/1739815215573-PHH0IZNKUW919932PZ52/audreys-children-social-share3.jpg?format=1500w&content-type=image%2Fjpeg"
+            className="w-full h-[764px] min-h-[300px] sm:min-h-[200px] object-cover "
             alt="Slide 3"
           />
+          <div className="absolute  inset-0  flex flex-col justify-end left-40 bottom-70">
+            <p className="text-white text-[14px]">Now Playing:</p>
+            <p className="text-white text-[36px] font-[700]">
+              Audrey's children
+            </p>
+            <div className="flex items-center gap-1">
+              <Star
+                className="stroke-[1px] text-[#fde047] fill-[#fde047]"
+                size={16}
+              />
+              <div className="flex items-center">
+                <p className="text-white text-[18px] font-[600]">6.5</p>
+                <p className="text-[#cbcbcb] text-[16px] font-[400]">/10</p>
+              </div>
+            </div>
+            <p className="text-white w-[302px] text-[13px] pb-[12px]"></p>
+            <button className="flex justify-center items-center h-[40px] w-[145px] rounded-[6px] bg-white  gap-[8px]">
+              <Play className="stroke-[1.4px] size-[18px] " /> Watch Trailer
+            </button>
+          </div>
         </CarouselItem>
       </CarouselContent>
 

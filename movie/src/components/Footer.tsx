@@ -5,7 +5,10 @@ import { Phone } from "lucide-react";
 
 export const Footer = () => {
   return (
-    <div className="flex w-full h-[280px] bg-[#4338CA] justify-around py-[40px] ">
+    <div
+      className="flex w-full h-[280px] bg-[#4338CA] justify-between
+     py-[40px] px-[60px] "
+    >
       <div className="flex flex-col gap-[12px] ">
         <span className="flex items-center gap-[8px]">
           <Film className=" text-white size-[20px] stroke-[1.2px]" />
@@ -43,9 +46,15 @@ export const Footer = () => {
             </div>
           </div>
         </div>
-        <div>
+        <div className="flex flex-col gap-[12px]">
           {" "}
           <p className="text-white text-[14px] font-[400]">Follow us</p>
+          <div className="flex gap-[12px] text-white text-[14px] font-[500]">
+            <a>Facebook</a>
+            <a>Instagram</a>
+            <a>Twitter</a>
+            <a>Youtube</a>
+          </div>
         </div>
       </div>
     </div>

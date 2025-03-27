@@ -6,6 +6,7 @@ import { Slide } from "@/components/Slide";
 import { Upcoming } from "@/components/Upcoming";
 import { Popular } from "@/components/Popular";
 import { Footer } from "@/components/Footer";
+import { TopRated } from "@/components/TopRated";
 
 export default function Home() {
   return (
@@ -31,6 +32,7 @@ export default function Home() {
       <div className="flex flex-col gap-[52px]">
         <Upcoming />
         <Popular />
+        <TopRated />
         <Footer />
       </div>
     </div>
