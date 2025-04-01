@@ -1,6 +1,7 @@
+"use client";
 import React from "react";
 import { Film } from "lucide-react";
-import { GenreDropdown } from "./GenreDropdown";
+import { Genre } from "./Genre";
 import { SearchIn } from "./SearchIn";
 import { DarkMod } from "./DarkMod";
 
@@ -12,7 +13,7 @@ export const Navigation = () => {
         <p className="font-[700] text-[20px] text-[#4338CA] italic">Movie Z</p>
       </span>
       <span className="flex items-center gap-[12px]">
-        <GenreDropdown />
+        <Genre />
         <SearchIn />
       </span>
       <span className="flex items-center">

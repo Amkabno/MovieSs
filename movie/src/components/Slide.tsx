@@ -15,7 +15,7 @@ export const Slide = () => {
       <CarouselContent className="flex w-full">
         <CarouselItem className="min-w-full flex-shrink-0 relative">
           <img
-            src="https://s3-alpha-sig.figma.com/img/c78e/5e57/16d36abbdaa8df480db189d5729e384a?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=mLG2xOJZNT2vGCrvhDwo3-iKl0QLHOJCxUbykqD81OWYT61RDmWH~sY5qc4qVMmDHRoLdT3VXAnqpxjl4QRY7lvqwtvVTj2-RScRPADrSRE2X1dKJ6MNwI89GQsAr7CVA~Sw886s4cN3GzZCxbhX6nG5wCcsdExQ3ZifH-DrPK1y2qNpWDmJzamRmYUQB4G5gKUvdNeqjPEES5nuyWmp4tVWbJDWV1Ve6DECdtwn6WwE~0puD445Fe7qQpsvTO15bYmHP3E7sN6ZamI~BBe1H7Aisb1JjhHE35MH~r0CHClF6Ayy8aDTsnbuKYmE-rzkB3IlXZLoaZaJNRHFDc~Erg__"
+            src="https://s3-alpha-sig.figma.com/img/c78e/5e57/16d36abbdaa8df480db189d5729e384a?Expires=1744588800&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=ByBQlj7O5U1E-i1Jw9vxL6X9cmXuydr71z~2b4bRo3whYHPae3NZvG5irogA~G3rV9-IfCrwvnIzXq4v3fm9UzRXXyPcm3Nfn2lJofyK6ldOlYh-3lIhMUaUvDDhwvxXgjQ9F85dMfAzm97MoR-t96vWaiZxnxqGisW8xlj6LCsW8rLU7XQpDH4UYthLvEc6~Nglslgav4cHACA3Xplwn1qY0Vy~ItQyw6~HL0GWKU37wxZMai7RDQmpmIi5lhwB6PYXQ4y8JzPskXyORHkRT1R-AHu0IrW8xpd9E6oXEmwyXNzdJNXgRu4Xy8OQBequ3mPvU0-7Ri~nLb1EHBf0vA__"
             className="w-full h-auto min-h-[300px] sm:min-h-[200px] object-cover"
             alt="Slide 1"
           />

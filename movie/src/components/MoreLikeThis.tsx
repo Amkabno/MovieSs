@@ -12,24 +12,24 @@ type MovieDataTypes = {
   vote_average: number;
 };
 
-export const TopRated = () => {
-  const [topRated, setTopRated] = useState<MovieDataTypes[]>([]);
-  const fetchTopRated = async () => {
+export const MoreLikeThis = () => {
+  const [moreLikeThis, setMoreLikeThis] = useState<MovieDataTypes[]>([]);
+  const fetchMoreLikeThis = async () => {
     const { data } = await axiosInstance.get(
-      "/movie/top_rated?language=en-US&page=1"
+      "/movie/278/similar?language=en-US&page=1"
     );
-    setTopRated(data.results);
+    setMoreLikeThis(data.results);
   };
   useEffect(() => {
-    fetchTopRated();
+    fetchMoreLikeThis();
   }, []);
-  console.log(topRated);
-  const cardsData = topRated?.slice(0, 10);
+  console.log(moreLikeThis);
+  const cardsData = moreLikeThis?.slice(0, 5);
 
   return (
-    <div className=" px-[80px] flex flex-col gap-[8px] ">
+    <div className="pt-[52px]  flex flex-col gap-[8px] ">
       <div className="flex justify-between pb-[32px]">
-        <p className="text-[24px] font-[600]">Top Rated</p>
+        <p className="text-[24px] font-[600]">More like this</p>
         <button className="text-[14px] font-[500] flex gap-[8px] items-center">
           See more <ArrowRight className="stroke-[1.2px]" size={20} />
         </button>

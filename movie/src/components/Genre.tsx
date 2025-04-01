@@ -1,5 +1,7 @@
 import React from "react";
 import { ChevronDown, ChevronRight } from "lucide-react";
+import { useEffect, useState } from "react";
+import { axiosInstance } from "@/lib/utils";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -9,10 +11,20 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 interface GenreProps {
-  genres: string[];
+  name: string;
+  id: number;
 }
 
-export const Genre: React.FC<GenreProps> = ({ genres }) => {
+export const Genre = () => {
+  const [genres, setGenres] = useState<GenreProps[]>([]);
+  const fetchGenre = async () => {
+    const { data } = await axiosInstance.get("/genre/movie/list?language=en");
+    setGenres(data.genres);
+  };
+  useEffect(() => {
+    fetchGenre();
+  }, []);
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger className="h-auto border-[1.5px] rounded-[6px] px-[16px] py-[8px] flex items-center gap-[8px] font-medium text-[14px]">
@@ -29,13 +41,13 @@ export const Genre: React.FC<GenreProps> = ({ genres }) => {
         <DropdownMenuSeparator />
 
         <div className="flex flex-wrap gap-[16px] p-[8px]">
-          {genres.map((genre, index) => (
+          {genres?.map((genre) => (
             <a
-              key={index}
+              key={genre.id}
               href="#"
               className="flex justify-between items-center rounded-full hover:bg-gray-100 text-[12px] font-[600] border-[#E4E4E7] border-[1px] px-[8px] h-[20px] gap-[4px]  "
             >
-              {genre}
+              {genre.name}
               <ChevronRight className="size-[15px] stroke-[1.5px]" />
             </a>
           ))}
