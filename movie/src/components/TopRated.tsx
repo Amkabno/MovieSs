@@ -24,7 +24,7 @@ export const TopRated = () => {
     fetchTopRated();
   }, []);
   console.log(topRated);
-  const cardsData = topRated?.slice(0, 10);
+  const cardsData = topRated?.slice(0, 12);
 
   return (
     <div className=" px-[80px] flex flex-col gap-[8px] ">
@@ -35,7 +35,7 @@ export const TopRated = () => {
         </button>
       </div>
 
-      <div className="grid grid-cols-5 gap-[16px]">
+      <div className="grid grid-cols-6 gap-[16px]">
         {cardsData?.map((card, index) => (
           <Card
             key={index}

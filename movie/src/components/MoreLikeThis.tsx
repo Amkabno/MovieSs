@@ -27,7 +27,7 @@ export const MoreLikeThis = () => {
   const cardsData = moreLikeThis?.slice(0, 5);
 
   return (
-    <div className="pt-[52px]  flex flex-col gap-[8px] ">
+    <div className=" flex flex-col gap-[8px] ">
       <div className="flex justify-between pb-[32px]">
         <p className="text-[24px] font-[600]">More like this</p>
         <button className="text-[14px] font-[500] flex gap-[8px] items-center">
