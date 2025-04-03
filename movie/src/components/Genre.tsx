@@ -40,7 +40,7 @@ export const Genre = () => {
         </p>
         <DropdownMenuSeparator />
 
-        <div className="flex flex-wrap gap-[16px] p-[8px]">
+        <div className="flex flex-wrap gap-[16px] p-[8px] ">
           {genres?.map((genre) => (
             <a
               key={genre.id}

@@ -17,6 +17,11 @@ type MovieDataTypes = {
   overview: string;
 };
 
+const RoundedVote = (vote_average: number) => {
+  const roundedValue = Math.round(vote_average * 10) / 10;
+  return <p>{roundedValue}</p>;
+};
+
 export const Slide = () => {
   const [nowPlaying, setNowPlaying] = useState<MovieDataTypes[]>([]);
 
@@ -61,7 +66,7 @@ export const Slide = () => {
                 />
                 <div className="flex items-center">
                   <p className="text-white text-[18px] font-[600]">
-                    {movie.vote_average}
+                    {RoundedVote(movie.vote_average)}
                   </p>
                   <p className="text-[#cbcbcb] text-[16px] font-[400]">/10</p>
                 </div>

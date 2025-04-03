@@ -10,6 +10,7 @@ type MovieDataTypes = {
   title: string;
   poster_path: string;
   vote_average: number;
+  id: string;
 };
 
 export const TopRated = () => {
@@ -24,7 +25,7 @@ export const TopRated = () => {
     fetchTopRated();
   }, []);
   console.log(topRated);
-  const cardsData = topRated?.slice(0, 12);
+  const cardsData = topRated?.slice(0, 10);
 
   return (
     <div className=" px-[80px] flex flex-col gap-[8px] ">
@@ -35,9 +36,10 @@ export const TopRated = () => {
         </button>
       </div>
 
-      <div className="grid grid-cols-6 gap-[16px]">
+      <div className="grid grid-cols-5 gap-[16px]">
         {cardsData?.map((card, index) => (
           <Card
+            id={card.id}
             key={index}
             rate={card.vote_average}
             title={card.title}

@@ -2,7 +2,7 @@
 import React from "react";
 import { Film } from "lucide-react";
 import { Genre } from "./Genre";
-import { SearchIn } from "./SearchIn";
+import { Input } from "./Input";
 import { DarkMod } from "./DarkMod";
 
 export const Navigation = () => {
@@ -14,7 +14,7 @@ export const Navigation = () => {
       </span>
       <span className="flex items-center gap-[12px]">
         <Genre />
-        <SearchIn />
+        <Input />
       </span>
       <span className="flex items-center">
         <DarkMod />

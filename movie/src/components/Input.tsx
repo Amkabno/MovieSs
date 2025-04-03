@@ -1,7 +1,7 @@
 import React from "react";
 import { Search } from "lucide-react";
 
-export const SearchIn = () => {
+export const Input = () => {
   return (
     <span className="flex items-center ">
       <input
