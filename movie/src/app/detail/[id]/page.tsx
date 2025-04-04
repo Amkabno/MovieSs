@@ -86,7 +86,7 @@ function MovieDetails() {
       .join(", ") || "Unknown";
 
   return (
-    <div className="flex h-full w-full flex-col ">
+    <div className="flex h-full w-full flex-col  ">
       <div className="w-full h-[700px] pt-[100px] z-[-1] relative flex justify-center items-center ">
         {movieDetails.backdrop_path && (
           <img
@@ -101,9 +101,27 @@ function MovieDetails() {
             }}
           />
         )}
-        <div className="absolute  flex-col  w-full bottom-[-50px]">
-          <div className="flex-col px-[180px] w-full">
-            <div className="flex justify-between">
+        <div className="absolute  flex-col  w-full bottom-[-140px]">
+          <div className="flex  w-full items-center justify-center">
+            <div className="h-[428px] w-[760px] relative">
+              {movieDetails.backdrop_path && (
+                <img
+                  className="h-fill w-fill flex justify-center items-center object-fit brightness-[30%] rounded-[4px]"
+                  src={`https://image.tmdb.org/t/p/original${movieDetails.backdrop_path}`}
+                  alt={movieDetails.title}
+                />
+              )}
+              <div className="flex absolute bottom-[24px] left-[24px] items-center gap-[12px]">
+                <button className="w-[40px] h-[40px] flex justify-center items-center gap-[8px] bg-white rounded-full">
+                  <Play className="size-[16px] stroke-[2px]" />
+                </button>
+                <p className="text-white">Play trailer</p>
+                <div className="text-white">2:35</div>
+              </div>
+            </div>
+          </div>
+          <div className="flex-col px-[180px] w-full pt-[50px]">
+            <div className="flex gap-[70px] ">
               <div className="flex flex-col">
                 <p className="text-[36px] font-[700]">{movieDetails.title}</p>
                 <div className="flex gap-[5px] text-[18px] font-[400]">
@@ -124,7 +142,9 @@ function MovieDetails() {
                         <p className="text-[18px] font-[600]">
                           {RoundedVote(movieDetails.vote_average)}
                         </p>
-                        <p className="text-[16px] font-[400] text-black">/10</p>
+                        <p className="text-[16px] font-[400] text-[#71717A]">
+                          /10
+                        </p>
                       </div>
                     </div>
                     <p>{RoundedVoteCount(movieDetails.vote_count)}</p>
@@ -133,28 +153,10 @@ function MovieDetails() {
               </div>
             </div>
           </div>
-          <div className="flex gap-[36px] pt-[24px] w-full items-center justify-center">
-            <div className="h-[428px] w-[760px] relative">
-              {movieDetails.backdrop_path && (
-                <img
-                  className="h-fill w-fill flex justify-center items-center object-fit brightness-[30%] rounded-[4px]"
-                  src={`https://image.tmdb.org/t/p/original${movieDetails.backdrop_path}`}
-                  alt={movieDetails.title}
-                />
-              )}
-              <div className="flex absolute bottom-[24px] left-[24px] items-center gap-[12px]">
-                <button className="w-[40px] h-[40px] flex justify-center items-center gap-[8px] bg-white rounded-full">
-                  <Play className="size-[16px] stroke-[2px]" />
-                </button>
-                <p className="text-white">Play trailer</p>
-                <div className="text-white">2:35</div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 
-      <div className="flex flex-col gap-[20px] py-[32px] px-[180px] pt-[100px]">
+      <div className="flex flex-col gap-[20px] py-[32px] px-[180px] pt-[190px]">
         <div className="flex flex-wrap gap-[16px] ">
           <div className="flex justify-between items-center gap-[12px]">
             {movieDetails.genres.map((genre) => (

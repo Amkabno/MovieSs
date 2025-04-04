@@ -35,7 +35,7 @@ export const MoreLikeThis = () => {
         </button>
       </div>
 
-      <div className="grid grid-cols-5 gap-[16px]">
+      <div className="grid grid-cols-5 gap-[16px] ">
         {cardsData?.map((card, index) => (
           <Card
             key={index}

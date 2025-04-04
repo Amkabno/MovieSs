@@ -35,7 +35,7 @@ export const Card: React.FC<CardProps> = ({ rate, title, src, id }) => {
             <p className="text-[12px] font-[400] text-[#71717A] ">/10</p>
           </div>
         </div>
-        <p className="text-[18px] font-[400]">{title}</p>
+        <p className="text-[14px] font-[400]">{title}</p>
       </div>
     </a>
   );
